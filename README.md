@@ -1,75 +1,76 @@
-# Cloud Computing - Experiment 04: Demystifying Cloud Computing ☁️
+# Experiment No. 4: Provisioning and Scaling of a Website ☁️
 
-> **Experiment Title:** Study of Cloud Computing Concepts, Architectures, Service Models (SPI), Deployment Topologies, and Hosting via GitHub Pages.
+> **Title:** Working to Demonstrate Provisioning and Scaling of a Website on Cloud Infrastructure (GitHub Pages).  
+> **Course:** Computer Engineering — Cloud Computing Lab  
 
-## 🌐 Live Output Link
+---
+
+## 🌐 Hosted Output Link
 👉 **[https://gayatrii-ii.github.io/cc-experiment-04/](https://gayatrii-ii.github.io/cc-experiment-04/)**
 
 ---
 
-## ⚠️ Why Does the Live Link Show 404 & How to Fix It (Quick 1-Minute Fix)
+## ⚠️ How to Solve the 404 Error (GitHub Pages Deployment Setup)
 
-GitHub Pages is **disabled by default** when a repository is created. You simply need to enable it once:
+As shown in Page 5 of the experiment manual, GitHub Pages needs to be configured once:
 
-1. Open **[cc-experiment-04 Pages Settings](https://github.com/gayatrii-ii/cc-experiment-04/settings/pages)**.
+1. Open your repository's [GitHub Pages Settings](https://github.com/gayatrii-ii/cc-experiment-04/settings/pages).
 2. Under **Build and deployment**:
-   - **Source:** Select `Deploy from a branch`
-   - **Branch:** Select `main` (or `gh-pages`)
-   - **Folder:** `/ (root)`
+   - **Source:** Select **`Deploy from a branch`**
+   - **Branch:** Select **`main`** (or `gh-pages`)
+   - **Folder:** **`/ (root)`**
 3. Click the **Save** button.
-4. Wait **60–90 seconds** for GitHub to publish the site. The 404 will automatically disappear and your site will be live!
+4. Wait 30–60 seconds. GitHub will finish publishing and show:  
+   `"Your site is live at https://gayatrii-ii.github.io/cc-experiment-04/"`
 
 ---
 
-## 📚 What This Web Application Covers
+## 📋 Experiment Details
 
-This web application serves as an interactive educational hub for **Cloud Computing (CC Exp-04)**:
+### 🎯 Aim
+To study and demonstrate a fundamental concept of cloud computing using a simple interactive web application.
 
-1. **Core Cloud Definition & NIST 5 Characteristics:**
-   - On-Demand Self-Service
-   - Broad Network Access
-   - Resource Pooling
-   - Rapid Elasticity
-   - Measured Service
-2. **CapEx vs. OpEx Economic Model:**
-   - Detailed comparison of on-premises hardware costs vs. cloud pay-as-you-go utility pricing.
-3. **SPI Service Models:**
-   - **IaaS (Infrastructure as a Service):** AWS EC2, GCP Compute Engine, Azure VMs.
-   - **PaaS (Platform as a Service):** AWS Elastic Beanstalk, Google App Engine, Heroku.
-   - **SaaS (Software as a Service):** Google Workspace, Microsoft 365, Salesforce.
-4. **Interactive Shared Responsibility Stack:**
-   - Visual toggle between On-Premises, IaaS, PaaS, and SaaS showing who manages physical infrastructure, hypervisor, OS, middleware, and applications.
-5. **Deployment Models:**
-   - Public Cloud, Private Cloud, Hybrid Cloud, and Community Cloud with trade-offs.
-6. **On-Demand Cloud Resource Estimator:**
-   - Real-time simulation of vCPUs, RAM, and SSD storage costs based on standard AWS/GCP/Azure hourly rates.
-7. **Cloud Computing Knowledge Quiz:**
-   - 5 viva-focused multiple-choice questions with instant scoring, progress bar, and comprehensive explanations.
+### 📘 Theory
+Cloud computing provides computing services such as servers, storage, databases, networking, and software over the internet.
+- **Cloud Services:** Access computing resources over the internet.
+- **Virtualization:** Use virtual resources to improve flexibility.
+- **Scalability:** Adjust resources according to demand.
+
+### 💻 Software Requirements
+- Computer or Laptop
+- Internet Connection
+- Google Chrome or Microsoft Edge
+- HTML, CSS and JavaScript
+- GitHub Account
+- GitHub Pages for deployment
+
+### 📑 Procedure
+1. Create an HTML file for the webpage (`index.html`).
+2. Design the page using CSS (`style.css`).
+3. Add interactive functionality using JavaScript (`script.js`).
+4. Run the website in a web browser.
+5. Test the demonstration and observe the output.
+
+### 🚀 Interactive Demonstration
+- **Service Status:** Dynamic toggle between `Stopped` and `Running`.
+- **Scaling Simulation:** Demonstrates elastic scale-out and scale-in of virtual cloud instances.
+
+### ✅ Result
+The experiment webpage was created using HTML, CSS, and JavaScript. The interactive demonstration illustrates the basic working of a simulated cloud service.
 
 ---
 
 ## 📁 Repository Structure
-
 ```text
 cc-experiment-04/
-├── index.html        # Semantic HTML5 architecture & interactive sections
-├── style.css         # Modern styling, responsive layout, and light/dark theme support
-├── script.js         # Interactive Stack Explorer, Cost Estimator, and Viva Quiz
-└── README.md         # Project documentation and deployment guide
+├── index.html        # Main webpage structure matching the lab report layout
+├── style.css         # Styling, purple gradient hero, and responsive cards
+├── script.js         # Start/Stop service toggle and auto-scaling simulation
+└── README.md         # Experiment report documentation
 ```
 
 ---
 
-## 🛠️ Tech Stack
-
-- **HTML5:** Semantic architecture, accessible forms, and navigation anchors.
-- **CSS3:** Modern design system, CSS Custom Properties, CSS Grid, Flexbox, transitions.
-- **JavaScript (ES6+):** Pure vanilla JavaScript for state management, interactive quiz, dynamic stack rendering, and cost calculations.
-- **Hosting:** GitHub Pages.
-
----
-
 ## 👩‍💻 Author
-
-- **Author:** Gayatri Kadam ([@gayatrii-ii](https://github.com/gayatrii-ii))
-- **Repository:** [gayatrii-ii/cc-experiment-04](https://github.com/gayatrii-ii/cc-experiment-04)
+- **GitHub:** [@gayatrii-ii](https://github.com/gayatrii-ii)
+- **Repository:** [cc-experiment-04](https://github.com/gayatrii-ii/cc-experiment-04)
