@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloud Computing - Experiment 04</title>
+  <meta name="description" content="A comprehensive educational guide explaining Cloud Computing concepts, service models (IaaS, PaaS, SaaS), deployment strategies, and interactive tools for Cloud Computing Experiment 04.">
+  <title>Cloud Computing Explained | Experiment 04</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="background-decor"></div>
-
-  <!-- Navigation -->
+  <!-- Header / Navigation -->
   <header class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">CC Exp-04</span>
+        <span class="logo-icon">☁️</span>
+        <span class="logo-text">CloudLearn <small>Exp-04</small></span>
       </div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#service-models">Service Models</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#shared-responsibility">Architecture</a>
+        <a href="#cost-simulator">Estimator</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
           <span id="theme-icon">🌙</span>
@@ -30,73 +37,373 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <main class="main-content">
-    <section class="hero-section">
-      <div class="badge">Cloud Computing Lab</div>
-      <h1 class="hero-title">Hosting a Static Website on GitHub Pages</h1>
+    <!-- Hero Section -->
+    <section class="hero-section" id="overview">
+      <div class="badge">Cloud Computing Lab &bull; Experiment 04</div>
+      <h1 class="hero-title">Demystifying Cloud Computing</h1>
       <p class="hero-subtitle">
-        A lightweight, responsive web page built with HTML5, CSS3, and JavaScript, hosted seamlessly via GitHub Pages.
+        An interactive, in-depth guide to understanding cloud architectures, the SPI service models (IaaS, PaaS, SaaS), deployment topologies, virtualization, and on-demand cloud economics.
       </p>
 
-      <div class="clock-card">
-        <span class="clock-label">Live Session Time</span>
-        <div id="live-clock" class="clock-time">--:--:-- --</div>
-        <div id="live-date" class="clock-date">Loading date...</div>
+      <!-- NIST 5 Characteristics Pills -->
+      <div class="nist-banner">
+        <div class="nist-header">
+          <strong>NIST 5 Essential Characteristics of Cloud Computing</strong>
+        </div>
+        <div class="nist-pills">
+          <span class="pill">⚡ On-Demand Self-Service</span>
+          <span class="pill">🌐 Broad Network Access</span>
+          <span class="pill">👥 Resource Pooling</span>
+          <span class="pill">📈 Rapid Elasticity</span>
+          <span class="pill">📊 Measured Service</span>
+        </div>
       </div>
     </section>
 
-    <!-- Interactive Features Section -->
-    <section class="interactive-grid">
-      <!-- Feature Card 1 -->
-      <div class="card">
-        <div class="card-icon">🚀</div>
-        <h3>Interactive Counter</h3>
-        <p>Test DOM manipulation with this dynamic counter widget.</p>
-        <div class="counter-box">
-          <button id="btn-decrement" class="btn-control">-</button>
-          <span id="counter-value" class="counter-display">0</span>
-          <button id="btn-increment" class="btn-control">+</button>
-        </div>
-        <button id="btn-reset" class="btn-text">Reset Counter</button>
+    <!-- Section 1: What is Cloud Computing? -->
+    <section class="content-section">
+      <div class="section-header">
+        <span class="section-tag">Core Fundamentals</span>
+        <h2>What is Cloud Computing?</h2>
+        <p class="section-desc">According to the National Institute of Standards and Technology (NIST), cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources.</p>
       </div>
 
-      <!-- Feature Card 2 -->
-      <div class="card">
-        <div class="card-icon">🎨</div>
-        <h3>Color Generator</h3>
-        <p>Generate vibrant random palettes and copy hex codes instantly.</p>
-        <div class="color-preview-box">
-          <div id="color-box" class="color-box"></div>
-          <span id="color-code" class="color-code">#4F46E5</span>
+      <div class="grid-2-col">
+        <div class="info-card highlight-card">
+          <div class="card-badge">The Paradigm Shift</div>
+          <h3>Traditional IT vs. Cloud Computing</h3>
+          <p>In traditional on-premises infrastructure, organizations had to purchase physical servers, build cooling facilities, and hire dedicated maintenance teams (Capital Expenditure - <strong>CapEx</strong>). Cloud computing replaces this with an Operational Expenditure (<strong>OpEx</strong>) utility model.</p>
+          <ul class="check-list">
+            <li><strong>Pay-as-you-go:</strong> Pay only for the compute cycles and storage you actually consume.</li>
+            <li><strong>Zero Upfront Hardware:</strong> Spin up 100 enterprise servers in seconds with zero hardware procurement.</li>
+            <li><strong>Global Reach:</strong> Deploy applications in multiple continents within minutes via edge networks.</li>
+            <li><strong>Fault Tolerance & High Availability:</strong> Redundant multi-region availability zones protect against downtime.</li>
+          </ul>
         </div>
-        <button id="btn-random-color" class="btn-primary">Generate New Color</button>
-      </div>
 
-      <!-- Feature Card 3 -->
-      <div class="card">
-        <div class="card-icon">☁️</div>
-        <h3>Cloud & Deployment Info</h3>
-        <p>Details about this deployed instance on GitHub's static infrastructure.</p>
-        <ul class="info-list">
-          <li><strong>Platform:</strong> GitHub Pages</li>
-          <li><strong>Repository:</strong> cc-experiment-04</li>
-          <li><strong>Stack:</strong> HTML5, CSS3, ES6 JS</li>
-          <li><strong>Status:</strong> <span class="status-pill">Active</span></li>
-        </ul>
+        <div class="info-card">
+          <div class="card-badge">Key Drivers</div>
+          <h3>Why Do Modern Enterprises Use the Cloud?</h3>
+          <div class="benefit-item">
+            <span class="benefit-icon">🚀</span>
+            <div>
+              <strong>Agility & Speed:</strong>
+              <p>Reduces provisioning lead time from months to seconds, allowing rapid experimentation.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🛡️</span>
+            <div>
+              <strong>Automated Disaster Recovery:</strong>
+              <p>Continuous geo-replicated backups ensure business continuity during catastrophic failures.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🔄</span>
+            <div>
+              <strong>Elastic Scaling:</strong>
+              <p>Automatically scales compute instances up during traffic spikes and down during quiet hours.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Message / Greeting Form -->
-    <section class="message-section">
-      <div class="message-card">
-        <h3>Say Hello! 👋</h3>
-        <p>Leave a quick greeting or message to test interactive alerts.</p>
-        <form id="greeting-form" class="greeting-form">
-          <input type="text" id="visitor-name" placeholder="Enter your name..." required />
-          <button type="submit" class="btn-primary">Submit</button>
-        </form>
-        <div id="greeting-output" class="greeting-output"></div>
+    <!-- Section 2: Cloud Service Models (SPI) -->
+    <section class="content-section" id="service-models">
+      <div class="section-header">
+        <span class="section-tag">Service Hierarchy</span>
+        <h2>The SPI Cloud Service Models</h2>
+        <p class="section-desc">Cloud computing services are categorized into three core abstraction layers: IaaS, PaaS, and SaaS.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <!-- IaaS -->
+        <div class="tier-card">
+          <div class="tier-header iaas-header">
+            <span class="tier-abbr">IaaS</span>
+            <h3>Infrastructure as a Service</h3>
+          </div>
+          <div class="tier-body">
+            <p class="tier-desc">Provides fundamental raw computing resources such as virtual machines, raw storage, firewalls, and virtual networks.</p>
+            <div class="tier-features">
+              <strong>Key Characteristics:</strong>
+              <ul>
+                <li>Maximum architectural control</li>
+                <li>User manages OS, runtimes & apps</li>
+                <li>Highly scalable virtualization</li>
+              </ul>
+            </div>
+            <div class="tier-examples">
+              <strong>Examples:</strong>
+              <span class="tag">AWS EC2 / S3</span>
+              <span class="tag">Google Compute Engine</span>
+              <span class="tag">Azure VMs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PaaS -->
+        <div class="tier-card featured-tier">
+          <div class="tier-header paas-header">
+            <span class="tier-abbr">PaaS</span>
+            <h3>Platform as a Service</h3>
+          </div>
+          <div class="tier-body">
+            <p class="tier-desc">Provides a managed cloud environment for developers to build, test, run, and scale applications without managing OS or hardware.</p>
+            <div class="tier-features">
+              <strong>Key Characteristics:</strong>
+              <ul>
+                <li>Automated patching, scaling & OS</li>
+                <li>Built-in deployment pipelines</li>
+                <li>Developer-centric productivity</li>
+              </ul>
+            </div>
+            <div class="tier-examples">
+              <strong>Examples:</strong>
+              <span class="tag">AWS Elastic Beanstalk</span>
+              <span class="tag">Google App Engine</span>
+              <span class="tag">Heroku</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SaaS -->
+        <div class="tier-card">
+          <div class="tier-header saas-header">
+            <span class="tier-abbr">SaaS</span>
+            <h3>Software as a Service</h3>
+          </div>
+          <div class="tier-body">
+            <p class="tier-desc">Delivers complete end-user software applications hosted in the cloud, accessed through a web browser or mobile client.</p>
+            <div class="tier-features">
+              <strong>Key Characteristics:</strong>
+              <ul>
+                <li>Zero installation or infrastructure setup</li>
+                <li>Accessible on any device anywhere</li>
+                <li>Subscription or freemium pricing</li>
+              </ul>
+            </div>
+            <div class="tier-examples">
+              <strong>Examples:</strong>
+              <span class="tag">Google Workspace</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Salesforce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive Shared Responsibility Model -->
+    <section class="content-section" id="shared-responsibility">
+      <div class="section-header">
+        <span class="section-tag">Interactive Diagram</span>
+        <h2>The Shared Responsibility Stack</h2>
+        <p class="section-desc">Click any model below to inspect which layers are managed by <strong>You (Customer)</strong> versus the <strong>Cloud Provider</strong>.</p>
+      </div>
+
+      <div class="shared-model-container">
+        <!-- Model Selection Tabs -->
+        <div class="model-tabs" role="tablist">
+          <button class="model-tab" data-model="onprem">On-Premises</button>
+          <button class="model-tab" data-model="iaas">IaaS (Infrastructure)</button>
+          <button class="model-tab active" data-model="paas">PaaS (Platform)</button>
+          <button class="model-tab" data-model="saas">SaaS (Software)</button>
+        </div>
+
+        <div class="legend-bar">
+          <span class="legend-item"><span class="legend-box customer-color"></span> Managed by You (Customer)</span>
+          <span class="legend-item"><span class="legend-box provider-color"></span> Managed by Cloud Provider</span>
+        </div>
+
+        <!-- Stack Layers -->
+        <div class="layers-stack" id="layers-stack">
+          <!-- Dynamically populated / styled by script.js -->
+        </div>
+
+        <div class="stack-description" id="stack-summary">
+          Loading stack details...
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Cloud Deployment Models -->
+    <section class="content-section" id="deployment">
+      <div class="section-header">
+        <span class="section-tag">Topologies</span>
+        <h2>Cloud Deployment Models</h2>
+        <p class="section-desc">Deployment models define who owns, manages, and accesses the cloud infrastructure.</p>
+      </div>
+
+      <div class="deployment-grid">
+        <div class="deploy-card">
+          <div class="deploy-icon">🌍</div>
+          <h3>Public Cloud</h3>
+          <p>Resources (servers, storage) are owned and operated by a third-party cloud provider and shared across multiple tenants over the public internet.</p>
+          <div class="pros-cons">
+            <span class="pro">✓ Lowest upfront costs</span>
+            <span class="pro">✓ Near-infinite scalability</span>
+            <span class="con">✗ Shared infrastructure concerns</span>
+          </div>
+        </div>
+
+        <div class="deploy-card">
+          <div class="deploy-icon">🏢</div>
+          <h3>Private Cloud</h3>
+          <p>Cloud infrastructure provisioned for exclusive use by a single organization comprising multiple consumers (business units).</p>
+          <div class="pros-cons">
+            <span class="pro">✓ Maximum security & compliance</span>
+            <span class="pro">✓ Custom hardware configurations</span>
+            <span class="con">✗ Higher CapEx & maintenance</span>
+          </div>
+        </div>
+
+        <div class="deploy-card">
+          <div class="deploy-icon">🔀</div>
+          <h3>Hybrid Cloud</h3>
+          <p>Combines private and public clouds, bound together by standardized technology allowing data and application portability ("cloud bursting").</p>
+          <div class="pros-cons">
+            <span class="pro">✓ Optimal balance of cost & control</span>
+            <span class="pro">✓ Sensitive data stays on-prem</span>
+            <span class="con">✗ Complex integration & networking</span>
+          </div>
+        </div>
+
+        <div class="deploy-card">
+          <div class="deploy-icon">🤝</div>
+          <h3>Community Cloud</h3>
+          <p>Infrastructure shared exclusively by several organizations with shared concerns (e.g., regulatory compliance, research consortiums).</p>
+          <div class="pros-cons">
+            <span class="pro">✓ Shared financial & resource burden</span>
+            <span class="pro">✓ Tailored industry compliance</span>
+            <span class="con">✗ Limited storage & bandwidth caps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Interactive Cloud Cost & Resource Estimator -->
+    <section class="content-section" id="cost-simulator">
+      <div class="section-header">
+        <span class="section-tag">Interactive Simulation</span>
+        <h2>On-Demand Cloud Resource Estimator</h2>
+        <p class="section-desc">Experience the pay-as-you-go economic model. Adjust CPU, RAM, and Storage to simulate real-time cloud instance provisioning costs.</p>
+      </div>
+
+      <div class="simulator-wrapper">
+        <div class="simulator-controls">
+          <!-- Cloud Provider -->
+          <div class="control-group">
+            <label for="provider-select">Cloud Provider Benchmark:</label>
+            <select id="provider-select" class="form-select">
+              <option value="aws">Amazon Web Services (AWS EC2)</option>
+              <option value="gcp">Google Cloud Platform (Compute Engine)</option>
+              <option value="azure">Microsoft Azure (Virtual Machines)</option>
+            </select>
+          </div>
+
+          <!-- vCPUs Slider -->
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="slider-cpu">Compute vCPUs:</label>
+              <span id="val-cpu" class="slider-val">4 vCPUs</span>
+            </div>
+            <input type="range" id="slider-cpu" min="1" max="64" value="4" step="1">
+          </div>
+
+          <!-- RAM Slider -->
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="slider-ram">Memory (RAM):</label>
+              <span id="val-ram" class="slider-val">16 GB</span>
+            </div>
+            <input type="range" id="slider-ram" min="2" max="256" value="16" step="2">
+          </div>
+
+          <!-- SSD Storage Slider -->
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="slider-storage">NVMe SSD Storage:</label>
+              <span id="val-storage" class="slider-val">200 GB</span>
+            </div>
+            <input type="range" id="slider-storage" min="20" max="2000" value="200" step="20">
+          </div>
+
+          <!-- Hours per Day -->
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="slider-hours">Run-time per Day:</label>
+              <span id="val-hours" class="slider-val">24 Hours (Continuous)</span>
+            </div>
+            <input type="range" id="slider-hours" min="1" max="24" value="24" step="1">
+          </div>
+        </div>
+
+        <!-- Simulator Result Display -->
+        <div class="simulator-card">
+          <div class="calc-label">Estimated Instance Cost</div>
+          <div class="calc-monthly" id="calc-monthly">$0.00 / month</div>
+          <div class="calc-hourly" id="calc-hourly">($0.000 / hour)</div>
+
+          <div class="calc-breakdown">
+            <div class="breakdown-row">
+              <span>Compute (vCPU):</span>
+              <span id="cost-cpu">$0.00</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Memory (RAM):</span>
+              <span id="cost-ram">$0.00</span>
+            </div>
+            <div class="breakdown-row">
+              <span>SSD Storage:</span>
+              <span id="cost-storage">$0.00</span>
+            </div>
+          </div>
+
+          <div class="calc-note">
+            💡 <em>Notice how shutting down instances when idle (e.g. 8 hrs/day vs 24 hrs/day) saves ~66% of infrastructure expense!</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Interactive Knowledge Quiz -->
+    <section class="content-section" id="quiz">
+      <div class="section-header">
+        <span class="section-tag">Knowledge Check</span>
+        <h2>Cloud Computing Lab Quiz</h2>
+        <p class="section-desc">Test your understanding of Experiment 04 concepts with these viva questions.</p>
+      </div>
+
+      <div class="quiz-container">
+        <div id="quiz-card" class="quiz-card">
+          <div class="quiz-progress-bar">
+            <div id="quiz-progress" class="quiz-progress-fill"></div>
+          </div>
+          <div class="quiz-meta">
+            <span id="quiz-question-number">Question 1 of 5</span>
+            <span id="quiz-score-tracker">Score: 0</span>
+          </div>
+
+          <h3 id="quiz-question-text" class="quiz-question">Loading question...</h3>
+          <div id="quiz-options" class="quiz-options-list"></div>
+
+          <div id="quiz-explanation" class="quiz-explanation"></div>
+
+          <div class="quiz-actions">
+            <button id="btn-next-question" class="btn-primary" style="display: none;">Next Question &rarr;</button>
+          </div>
+        </div>
+
+        <div id="quiz-result-card" class="quiz-result-card" style="display: none;">
+          <div class="result-icon">🏆</div>
+          <h3>Quiz Completed!</h3>
+          <p id="quiz-final-score">You scored 5 out of 5</p>
+          <p id="quiz-feedback" class="quiz-feedback"></p>
+          <button id="btn-restart-quiz" class="btn-primary">Restart Quiz</button>
+        </div>
       </div>
     </section>
   </main>
@@ -104,12 +411,12 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <p>Created for Cloud Computing Experiment 04 &bull; Hosted on <strong>GitHub Pages</strong></p>
-      <p class="footer-sub">Designed & developed with ❤️ by <a href="https://github.com/gayatrii-ii" target="_blank" rel="noopener noreferrer">@gayatrii-ii</a></p>
+      <p><strong>Cloud Computing Lab &bull; Experiment 04</strong> &bull; Static Site Hosting via GitHub Pages</p>
+      <p class="footer-sub">Created by <a href="https://github.com/gayatrii-ii" target="_blank" rel="noopener noreferrer">@gayatrii-ii</a> &bull; Repository: <a href="https://github.com/gayatrii-ii/cc-experiment-04" target="_blank" rel="noopener noreferrer">cc-experiment-04</a></p>
     </div>
   </footer>
 
-  <!-- Toast Notification Container -->
+  <!-- Toast Notification -->
   <div id="toast" class="toast"></div>
 
   <script src="script.js"></script>
