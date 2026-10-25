@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Computing - Experiment 04</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-decor"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">CC Exp-04</span>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a href="https://github.com/gayatrii-ii/cc-experiment-04" target="_blank" rel="noopener noreferrer" class="btn-github">
+          GitHub Repo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="badge">Cloud Computing Lab</div>
+      <h1 class="hero-title">Hosting a Static Website on GitHub Pages</h1>
+      <p class="hero-subtitle">
+        A lightweight, responsive web page built with HTML5, CSS3, and JavaScript, hosted seamlessly via GitHub Pages.
+      </p>
+
+      <div class="clock-card">
+        <span class="clock-label">Live Session Time</span>
+        <div id="live-clock" class="clock-time">--:--:-- --</div>
+        <div id="live-date" class="clock-date">Loading date...</div>
+      </div>
+    </section>
+
+    <!-- Interactive Features Section -->
+    <section class="interactive-grid">
+      <!-- Feature Card 1 -->
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Interactive Counter</h3>
+        <p>Test DOM manipulation with this dynamic counter widget.</p>
+        <div class="counter-box">
+          <button id="btn-decrement" class="btn-control">-</button>
+          <span id="counter-value" class="counter-display">0</span>
+          <button id="btn-increment" class="btn-control">+</button>
+        </div>
+        <button id="btn-reset" class="btn-text">Reset Counter</button>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Color Generator</h3>
+        <p>Generate vibrant random palettes and copy hex codes instantly.</p>
+        <div class="color-preview-box">
+          <div id="color-box" class="color-box"></div>
+          <span id="color-code" class="color-code">#4F46E5</span>
+        </div>
+        <button id="btn-random-color" class="btn-primary">Generate New Color</button>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="card">
+        <div class="card-icon">☁️</div>
+        <h3>Cloud & Deployment Info</h3>
+        <p>Details about this deployed instance on GitHub's static infrastructure.</p>
+        <ul class="info-list">
+          <li><strong>Platform:</strong> GitHub Pages</li>
+          <li><strong>Repository:</strong> cc-experiment-04</li>
+          <li><strong>Stack:</strong> HTML5, CSS3, ES6 JS</li>
+          <li><strong>Status:</strong> <span class="status-pill">Active</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Message / Greeting Form -->
+    <section class="message-section">
+      <div class="message-card">
+        <h3>Say Hello! 👋</h3>
+        <p>Leave a quick greeting or message to test interactive alerts.</p>
+        <form id="greeting-form" class="greeting-form">
+          <input type="text" id="visitor-name" placeholder="Enter your name..." required />
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+        <div id="greeting-output" class="greeting-output"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>Created for Cloud Computing Experiment 04 &bull; Hosted on <strong>GitHub Pages</strong></p>
+      <p class="footer-sub">Designed & developed with ❤️ by <a href="https://github.com/gayatrii-ii" target="_blank" rel="noopener noreferrer">@gayatrii-ii</a></p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
